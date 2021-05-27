@@ -33,7 +33,6 @@ function patientSync(){
               }, function(error, response, body){
                 let res = JSON.parse(response.body)
                 res.results.forEach(element => {
-                  console.log(element);
                 });
               });
              });

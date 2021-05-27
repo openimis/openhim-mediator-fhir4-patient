@@ -16,7 +16,7 @@ app.use(bodyParser());
   router.get('/', async(ctx, next) => {
    await superagent.get(process.env.SOSYS_URL)
       .then(res => {
-        deactivate.patientSync();
+        // deactivate.patientSync();
         patientUpdate.update(res.body.results);
         ctx.body = res.body;
       })
